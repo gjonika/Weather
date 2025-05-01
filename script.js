@@ -2,8 +2,8 @@
 //  Replace the placeholders below with your actual API keys.
 
 const OPEN_METEO_API_URL = 'https://api.open-meteo.com/v1/forecast';
-const OPEN_CAGE_API_KEY = 'YOUR_OPENCAGE_API_KEY'; //  Get your API key from OpenCage
-const DEFAULT_CITY = 'Vilnius';
+const OPEN_CAGE_API_KEY = '8f4c451e67e047d29e6a4dc73f5204f4'; //  Get your API key from OpenCage
+const DEFAULT_CITY = 'Klaipėda';
 
 const iconMap = {
     0: 'https://raw.githubusercontent.com/basmilius/weather-icons/master/production/fill/all/clear-day.svg',
