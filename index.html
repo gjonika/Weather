@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Orai Lietuvoje</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Orai Lietuvoje</h1>
+            <p>7 dienų ir 24 valandų prognozės</p>
+        </header>
+
+        <section class="location-selector">
+            <h2>Pasirinkite miestą</h2>
+            <div class="location-form">
+                <input type="text" id="place-select" placeholder="Įveskite miesto pavadinimą">
+                <button id="get-weather-btn">Rodyti orus</button>
+            </div>
+        </section>
+
+        <section class="weather-display" id="weather-container">
+            <div class="loading" id="loading-indicator" style="display: none;">Įkeliamas oras...</div>
+
+            <div id="weather-content">
+                <div class="current-weather">
+                    <div class="weather-info">
+                        <h2 id="city-name"></h2>
+                        <p id="current-date">---</p>
+                        <div class="temperature" id="temperature">--°C</div>
+                        <div class="weather-condition">
+                            <img id="condition-icon" src="" alt="Oro sąlygos">
+                            <p id="condition-text">--</p>
+                        </div>
+                    </div>
+
+                    <div class="weather-details">
+                        <div class="detail-item"><span class="label">Jaučiasi kaip</span><span class="value"
+                                id="feels-like">--</span></div>
+                        <div class="detail-item"><span class="label">Vėjas</span><span class="value"
+                                id="wind-speed">--</span></div>
+                        <div class="detail-item"><span class="label">Drėgmė</span><span class="value"
+                                id="humidity">--%</span></div>
+                        <div class="detail-item"><span class="label">Krituliai</span><span class="value"
+                                id="precipitation">-- mm</span></div>
+                        <div class="detail-item"><span class="label">Saulėtekis</span><span class="value"
+                                id="sunrise">--</span></div>
+                        <div class="detail-item"><span class="label">Saulėlydis</span><span class="value"
+                                id="sunset">--</span></div>
+                    </div>
+                </div>
+
+                <div class="forecast-tabs">
+                    <button class="tab-button active" data-tab="daily-tab">7 dienų prognozė</button>
+                    <button class="tab-button" data-tab="hourly-tab">24 val. prognozė</button>
+                    <button class="tab-button" data-tab="chart-tab">Temperatūros grafikas</button>
+                </div>
+
+                <div class="forecast-content active" id="daily-tab">
+                    <div class="daily-forecast" id="daily-forecast"></div>
+                </div>
+
+                <div class="forecast-content" id="hourly-tab">
+                    <div class="hourly-forecast" id="hourly-forecast"></div>
+                </div>
+
+                <div class="forecast-content" id="chart-tab">
+                    <canvas id="chart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Duomenys iš open-meteo.com API | Sukurta su ❤️</p>
+            <p>© 2024 Orai Lietuvoje</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
